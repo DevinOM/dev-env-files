@@ -1,0 +1,26 @@
+let leader=" "
+let guicursor=i:block
+
+" increment/decrement numbers with leader --------
+nnoremap <leader>+ <C-a>
+nnoremap <leader>- <C-x>
+
+" fuzzy search commands --------------------------
+nnoremap <leader>ff :action GotoFile<CR>
+
+" window manipulation ----------------------------
+nnoremap <c-a-> :action SplitHorizontally<CR>
+nnoremap <c-a|> :action SplitVertically<CR>
+
+" exit insert and visual mode with `jk` ----------
+inoremap jk <ESC>
+vnoremap jk <ESC>
+
+" move lines up and down in visual mode ----------
+vnoremap J :action MoveLineDown<CR>
+vnoremap K :action MoveLineUp<CR>
+
+" do not yank when using command -----------------
+xnoremap p pgvy
+nnoremap x "_x
+nnoremap caw "_caw
