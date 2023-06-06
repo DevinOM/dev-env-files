@@ -47,8 +47,3 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 alias vim="nvim"
-# ALIASES for quickly joining zoom channels
-alias se2-zoom="open https://tamusa.zoom.us/j/88271703970"
-alias computer-security-zoom="open https://tamusa.zoom.us/j/85613960697?pwd=S0VLcHkzbjZJMkY3UlZjR3RDelZTZz09"
-alias senior-project-zoom="open https://tamusa.zoom.us/j/82604046555"
-alias comp-arch-zoom="open https://tamusa.zoom.us/w/86769031370?tk=4xpqXt40_8ND-0dvqM1mrodNO0UuTwe2o5XfBnbbRco.DQMAAAAUM9ZYyhZ2NWowVmp3TVJ2ZVpSRWpXTUNTc0hnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&pwd=TlRiNFoxQVNlS3JKSTFpUUs2Z2JGdz09#success"
