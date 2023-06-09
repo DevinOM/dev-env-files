@@ -1,4 +1,5 @@
 let g:mapleader = "\<Space>"
+set scrolloff=99
 
 " increment/decrement numbers with leader --------
 nnoremap <leader>+ <C-a>
