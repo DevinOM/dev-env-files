@@ -1,21 +1,57 @@
-let g:mapleader = "\<Space>"
-set scrolloff=99
+let g:mapleader = "\<Space>" " set leader to space
+let &guicursor = "i:block" " Keep cursor a block in insert mode
 
-" increment/decrement numbers with leader --------
-nnoremap <leader>+ <C-a>
-nnoremap <leader>- <C-x>
+set scrolloff=99 " keep cursor in the middle of the screen
+set number " show line numbers
+set relativenumber " show relative line numbers
 
-" fuzzy search commands --------------------------
-nnoremap <leader>ff :action GotoFile<CR>
-nnoremap <leader>fs :action FindInPath<CR>
+set hlsearch " highlight search results
+set ignorecase " ignore case when searching
+set smartcase " ignore case when searching with capital letters
+set incsearch " show search results as you type
+set wrapscan " search from top when reaching bottom
+
+set surround " surround text with quotes, brackets, etc.
+
+" IDEA specific mappings -------------------------
+nmap <leader>? :action GotoAction<CR>
+nnoremap <leader>vv :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :action IdeaVim.ReloadVimRc.reload<CR>
+
+" exit insert ------------------------------------
+inoremap jk <ESC>
+
+" move between methods ---------------------------
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+" navigate tabs quickly --------------------------
+nnoremap <leader>tn :action NextTab<CR>
+nnoremap <leader>tp :action PreviousTab<CR>
+nnoremap <leader>tx :action CloseContent<CR>
 
 " window manipulation ----------------------------
-nnoremap <c-a-> :action SplitHorizontally<CR>
-nnoremap <c-a|> :action SplitVertically<CR>
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
 
-" exit insert and visual mode with `jk` ----------
-inoremap jk <ESC>
+" increment/decrement numbers --------------------
+nnoremap <leader>+ <C-a> " increment number
+nnoremap <leader>- <C-x> " decrement number
+
+" fuzzy search -----------------------------------
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fs :action FindInPath<CR>
 
 " move lines up and down in visual mode ----------
 vnoremap J :action MoveLineDown<CR>
 vnoremap K :action MoveLineUp<CR>
+
+" don't lose visual when indenting ---------------
+vnoremap < <gv
+vnoremap > >gv
+
+" quickfix ---------------------------------------
+nmap gr :action ShowUsages<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gs :action GotoSuperMethod<CR>
