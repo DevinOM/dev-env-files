@@ -22,7 +22,15 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search vi-mode)
+
+# Enable vi mode
+bindkey -v
+bindkey -s jk '\e'
+
+# ---- FZF ----
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
 
 # zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
