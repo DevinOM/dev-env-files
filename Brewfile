@@ -4,3 +4,4 @@ powerlevel10k
 neovim
 ripgrep
 lazygit
+fzf
